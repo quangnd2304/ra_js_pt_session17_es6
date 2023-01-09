@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Xây dựng lớp Student
+        class Student {
+            //constructor
+            constructor(id, name, age) {
+                this.studentId = id;
+                this.studentName = name;
+                this.age = age;
+            }
+            getStudentName() {
+                return this.studentName;
+            }
+            setStudentName(name) {
+                this.studentName = name;
+            }
+            getInfo() {
+                return this.studentId + "-" + this.studentName;
+            }
+        }
+        class ChildStudent extends Student {
+            constructor(id, name, age, mark) {
+                super(id, name, age);
+                this.mark = mark;
+            }
+
+            getInfoFull() {
+                return this.studentId + "-" + this.studentName + "-" + this.age + "-" + this.mark;
+            }
+
+        }
+        //Khởi tạo đối tượng từ lớp
+        let st = new Student("SV001", "Nguyễn Văn A", 20);
+        console.log("Thông tin sinh viên: " + st.getInfo());
+        //Khới tạo đối tương ChildStudent
+        let cst = new ChildStudent("SV002", "Nguyễn Văn B", 22, 9);
+        console.log('Thông tin sinh viên con: ', cst.getInfo());
+        console.log("Thông tin đầy đủ của sinh viên con:", cst.getInfoFull());
+    </script>
+</body>
+
+</html>

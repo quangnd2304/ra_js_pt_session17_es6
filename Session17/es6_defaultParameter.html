@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Xây dựng hàm tính tổng 2 số
+        //C1: khai báo giá trị mặc định cho tham số khi khai báo hàm
+        function add(num1, num2 = 7) {
+            let sum = num1 + num2;
+            return sum;
+        }
+        console.log("Tổng 2 số là: ", add(5));
+        console.log("Tổng 2 số là: ", add(5, 9));
+        //C2: Khai báo giá trị mặc định cho tham số trong thân hàm
+        function printName(name) {
+            name = name || "Tên mặc định";
+            console.log("Tên là: " + name);
+        }
+        printName("Nguyễn Văn A");
+        printName();
+    </script>
+</body>
+
+</html>

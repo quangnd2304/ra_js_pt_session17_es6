@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+
+<body>
+    <script>
+        // Khai báo biến bằng var --> toàn cục, cục bộ, có thể khai báo lại và gán lại giá trị
+        //Toàn cục
+        var studentName = "Nguyễn Văn A";
+        //Khai báo lại
+        var studentName;
+        //Gán giá trị lại
+        studentName = "Nguyễn Văn B";
+
+        function getName() {
+            //Cục bộ
+            var name = "Nguyễn Văn C";
+            return name;
+        }
+
+        //let --> khối lệnh, có thể gán lại giá trị nhưng không khai báo lại được
+        let age = 20;
+        age = 22;
+        //const --> khối lệnh, hằng số (primitive), không thể khai báo lại, không thể gán lại giá trị
+        const PI = 3.14;
+        //const --> non_primitive
+        const arr = [1, 5, 8];
+        arr[0] = 10;
+        arr.push(11);
+        console.log("mảng: ", arr);
+        const obj = { name: 'rikkei', age: 10 };
+        obj.address = "Hà Nội";
+        obj.age = 11;
+        console.log("Đối tượng:", obj);
+
+    </script>
+</body>
+
+</html>
